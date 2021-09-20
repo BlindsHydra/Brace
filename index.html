@@ -1,0 +1,119 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <title>Brace | Home</title>
+        <link rel="icon" href="favicon.png" type="image/x-icon">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+    <body>
+    <style>
+        body { background-color: #151515}    
+    </style>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="https://www.freeiconspng.com/thumbs/cloud-icon/cloud-icon-9.png" alt="logo" height="60">
+          </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            More Items...
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="https://twitter.com/FortniteBR">Leaks (via: FortniteBR)</a></li>
+            <li><a class="dropdown-item" href="events.html">Live Events</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="https://twitter.com/FortniteBR">News</a></li>
+            <li><a class="dropdown-item" href="patch.html">Patch Notes</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Page Content -->
+        <style>
+        /* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+        </style>
+<div id="slideshow-example" data-component="slideshow">
+        <div role="list">
+          <div class="slide">
+            <img src="https://cdn1.dotesports.com/wp-content/uploads/2021/09/13013037/Fortnite-Cubed-loading.jpg" alt="" width="auto" height="auto">
+          </div>
+          <div class="slide">
+            <img src="https://pbs.twimg.com/media/E_WwsixXIAo_j3Q?format=jpg&name=large" alt="" width="auto" height="auto">
+          </div>
+          <div class="slide">
+            <img src="https://pbs.twimg.com/media/E_aRX97WQAAdFfv?format=jpg&name=4096x4096" alt="" width="auto" height="auto">
+          </div>
+        </div>
+      </div>
+        <style>
+        [data-component="slideshow"] .slide {
+    display: none;
+  }
+
+  [data-component="slideshow"] .slide.active {
+    display: block;
+  }
+        </style>
+        <script>
+        var slideshows = document.querySelectorAll('[data-component="slideshow"]');
+  
+  // Apply to all slideshows that you define with the markup wrote
+  slideshows.forEach(initSlideShow);
+
+  function initSlideShow(slideshow) {
+
+    var slides = document.querySelectorAll(`#${slideshow.id} [role="list"] .slide`); // Get an array of slides
+
+    var index = 0, time = 5000;
+    slides[index].classList.add('active');  
+    
+    setInterval( () => {
+      slides[index].classList.remove('active');
+      
+      //Go over each slide incrementing the index
+      index++;
+      
+      // If you go over all slides, restart the index to show the first slide and start again
+      if (index === slides.length) index = 0; 
+      
+      slides[index].classList.add('active');
+
+    }, time);
+  }
+            
+        </script>
+    </body>
+</html>
